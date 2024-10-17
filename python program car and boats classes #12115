@@ -1,0 +1,30 @@
+class Vehicle:
+    def __init__(self, speed):
+        self.speed = speed
+
+    def __str__(self):
+        return f"This vehicle is going {self.speed} knots"
+
+
+class Car(Vehicle):
+    def __init__(self, speed):
+        super().__init__(speed)
+
+    def __str__(self):
+        return f"This car is going {self.speed} mph"
+
+
+class Boat(Vehicle):
+    def __init__(self, speed):
+        super().__init__(speed)
+
+    def __str__(self):
+        return f"This boat is going {self.speed} knots"
+
+
+# Example usage:
+car = Car(85)
+boat = Boat(25)
+
+print(car)  # Output: This car is going 85 mph
+print(boat)  # Output: This boat is going 25 knots
